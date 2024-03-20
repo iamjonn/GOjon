@@ -14,10 +14,11 @@ func contando(count int) {
 	}
 	
 }
+
 //Função principal
 func main() {
-	// funciona sequencialmente a nao ser que seja chamada uma go routine
-	go contando(5) //rota 2
-	go contando(5) // rotina 3 -> 2kb -> 1mb
+	// funciona sequencialmente a nao ser que seja chamada uma go routine para exucutar o paralelismo
+ go contando(5) //rota 2
+ go contando(5) // rotina 3 -> 2kb -> 1mb
 	contando(2)
 }
