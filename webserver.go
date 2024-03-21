@@ -6,7 +6,7 @@ import (
 )
 
 //Função principal
-func main () {
+func maimmmmmmmmmmmmmmmm() {
 	//http.ListenAndServe é uma função que cria um servidor web
 	http.ListenAndServe(":3000", nil)
 	//primeiro rodaar o codigo e depois abrir outro terminal e digitar curl localhost:8080

@@ -16,7 +16,7 @@ func (p Person) Walk(){
 }
 
 //Função principal
-func main() {
+func maimmmmmmmmmmmm() {
 	//call the function
 	var a int 
 	a = 10

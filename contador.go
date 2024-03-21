@@ -16,7 +16,7 @@ func contando(count int) {
 }
 
 //Função principal
-func main() {
+func mainmmmmmmmmmmm() {
 	// funciona sequencialmente a nao ser que seja chamada uma go routine para exucutar o paralelismo
  go contando(5) //rota 2
  go contando(5) // rotina 3 -> 2kb -> 1mb
