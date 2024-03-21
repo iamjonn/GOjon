@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // funcao main é uma thread
-func main() {
+func mainn() {
 	canal := make(chan string)
 //thread 2
   go func() {
