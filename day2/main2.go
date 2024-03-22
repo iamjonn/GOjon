@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // canal é uma forma de comunicação entre goroutines
-func main() {
+func mainnnnnnnnnnn() {
 	ch := make(chan int) // cria um canal
 	go publish(ch)
 	consume(ch)
