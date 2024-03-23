@@ -6,6 +6,8 @@ import (
 	"database/sql"
 	"encoding/json"
 	"net/http"
+	
+	_ "github.com/mattn/go-sqlite3"
 )
 
 // user é uma struct que representa um usuário
@@ -16,6 +18,10 @@ type user struct {
 }
 
 func main() {
+	mux := http.NewServeMux() // cria um novo multiplexador
+	mux.HandleFunc("/users", listUsersHandler) // adiciona a função listUsersHandler ao multiplexador
+
+
 	http.ListenAndServe(":8080", nil) // inicia o servidor na porta 8080
 }
 
