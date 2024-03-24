@@ -6,7 +6,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"net/http"
-	
+
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -18,14 +18,13 @@ type user struct {
 }
 
 func main() {
-	mux := http.NewServeMux() // cria um novo multiplexador
+	mux := http.NewServeMux()                  // cria um novo multiplexador
 	mux.HandleFunc("/users", listUsersHandler) // adiciona a função listUsersHandler ao multiplexador
 
-
-	http.ListenAndServe(":8080", nil) // inicia o servidor na porta 8080
+	http.ListenAndServe(":3000", mux) // inicia o servidor na porta 8080
 }
 
-func listUsersHandler(w http.ResponseWriter, r *http.Request) {
+func listUsersHandler(w http. ResponseWriter, r *http.Request) {
 	db, err := sql.Open("sqlite3", "user.db") // abre a conexão com o banco de dados
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError) // se der erro, retorna um erro 500
@@ -54,4 +53,5 @@ func listUsersHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error encoding JSON", http.StatusInternalServerError) // se der erro, retorna um erro 500
 		return
 	}
+
 }
